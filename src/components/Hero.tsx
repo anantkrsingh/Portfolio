@@ -27,9 +27,9 @@ const Hero = () => {
             words="A passionate programmer and a creative developer ?"
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
           />
-          <p className="text-center dark:text-white md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl font-thin ">
+          <p className="text-center flex gap-2 items-center dark:text-white md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl font-thin ">
             Hii 👋, you can call me{" "}
-            <span className="text-blue-300 font-bold">Anant</span>
+            <span className="text-blue-300 font-bold font-sans text-3xl"> {" "}Anant</span>
           </p>
           <a href="#about">
             <SpotifyButton

@@ -87,3 +87,49 @@
     background: linear-gradient(90deg, #161a31 0%, #06091f 100%);
   }
 }
+
+.splashScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  z-index: 1000;
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.zoomOut {
+  transform: scale(0);
+  opacity: 0;
+}
+
+.circleLoader {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.progress {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.letter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  transition: transform 1s ease;
+}
+
+.rotate {
+  transform: translate(-50%, -50%) rotate(180deg);
+}

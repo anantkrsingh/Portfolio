@@ -72,35 +72,51 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "3D Solar System Planets to Explore",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-    img: "/p1.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "https://github.com/adrianhajdin?tab=repositories",
+    title: "Cricboom Cricket Live Score App",
+    des: "Enjoy the thrill of cricket on cricboom, Amazing Features like ball to ball commentary before television",
+    img: "/p1.png",
+    iconLists: ["/re.svg", "/tail.svg", "/js.svg"],
+    link: "https://play.google.com/store/apps/details?id=com.cricboom.liveline",
   },
   {
     id: 2,
-    title: "Yoom - Video Conferencing App",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-    img: "/p2.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "https://github.com/adrianhajdin/zoom-clone",
+    title: "Chatvid - Free Video Conferencing App",
+    des: "Simplify your video conferencing experience with ChatVid. Seamlessly connect with colleagues and friends.",
+    img: "/p2.png",
+    iconLists: ["/kotlin.svg", "/android.svg", "/java.svg", "/fire.svg"],
+    link: "https://play.google.com/store/apps/details?id=com.hotshot.chatvid",
   },
   {
     id: 3,
-    title: "AI Image SaaS - Canva Application",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-    img: "/p3.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "https://github.com/adrianhajdin/ai_saas_app",
+    title: "Appliviu : Virtual Photoshoot by Rhizobee ",
+    des: "A plattform for virtual photshoot for reducing models & photography cost. An app by Rhizobee Innovations Pvt. Ltd.",
+    img: "/p3.png",
+    iconLists: ["/re.svg", "/tail.svg", "/js.svg", "nodejs.svg", "nginx.svg"],
+    link: "https://play.google.com/store/apps/details?id=com.rhizobee.appliviu",
   },
   {
     id: 4,
-    title: "Animated Apple Iphone 3D Website",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-    img: "/p4.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "https://github.com/adrianhajdin/iphone",
+    title: "Kavach Innovations Landing Page",
+    des: "Kavach innovations landing page, having multiple pages & designed for multiple responsive screens.",
+    img: "/p4.png",
+    iconLists: ["/re.svg", "/tail.svg", "/js.svg", "/gsap.svg"],
+    link: "https://kavachinnovations.com",
+  },
+  {
+    id: 4,
+    title: "CricSpin Live Line ",
+    des: "Cricspin is a website for live cricket score with live commentary ",
+    img: "/p5.png",
+    iconLists: ["/re.svg", "/tail.svg", "/js.svg", "/gsap.svg"],
+    link: "https://kavachinnovations.com",
+  },
+  {
+    id: 4,
+    title: "Mujomegle : Omegle Similar ",
+    des: "A Random Video chatting app using Websocket similar to Omegle ",
+    img: "/p6.png",
+    iconLists: ["/re.svg", "/tail.svg", "/js.svg", "/gsap.svg"],
+    link: "https://mujomegle.com",
   },
 ];
 
@@ -130,69 +146,23 @@ export const stacks = [
     icon: "./Jenkins.svg"
   }
 ]
-export const testimonials = [
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-];
+
 
 export const companies = [
   {
     id: 1,
-    name: "cloudinary",
-    img: "/cloud.svg",
-    nameImg: "/cloudName.svg",
+    name: "SNA Sistec",
+    nameImg: "/sna.jpeg",
   },
   {
     id: 2,
-    name: "appwrite",
-    img: "/app.svg",
-    nameImg: "/appName.svg",
+    name: "ETM Bikes",
+    nameImg: "/etm.jpg",
   },
   {
     id: 3,
-    name: "HOSTINGER",
-    img: "/host.svg",
-    nameImg: "/hostName.svg",
-  },
-  {
-    id: 4,
-    name: "stream",
-    img: "/s.svg",
-    nameImg: "/streamName.svg",
-  },
-  {
-    id: 5,
-    name: "docker.",
-    img: "/dock.svg",
-    nameImg: "/dockerName.svg",
+    name: "Rhizobee",
+    nameImg: "/rhizobee.png",
   },
 ];
 
@@ -206,22 +176,22 @@ export const workExperience = [
   },
   {
     id: 2,
-    title: "Mobile App Dev - JSM Tech",
-    desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
-    className: "md:col-span-2", // change to md:col-span-2
+    title: "Android App Dev - SNA Sistec ",
+    desc: "Designed and developed andorid app for controlling iot generators through phone",
+    className: "md:col-span-2", 
     thumbnail: "/exp2.svg",
   },
   {
     id: 3,
     title: "Freelance App Dev Project",
-    desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
+    desc: "Led the dev of a mobile app for a client, from initial concept to deployment on play stores.",
     className: "md:col-span-2", // change to md:col-span-2
     thumbnail: "/exp3.svg",
   },
   {
     id: 4,
-    title: "Lead Frontend Developer",
-    desc: "Developed and maintained user-facing features using modern frontend technologies.",
+    title: "Freelance Web Developer",
+    desc: "Developed and maintained user-facing features using modern both frontend & backend",
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",
   },

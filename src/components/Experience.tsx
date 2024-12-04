@@ -4,7 +4,7 @@ import { Button } from "./moving-borders";
 
 function Experience() {
   return (
-    <section>
+    <section id="experience">
       <h1 className="heading">
         My <span className="text-purple">Work Experience</span>
       </h1>

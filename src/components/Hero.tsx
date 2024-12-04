@@ -31,7 +31,7 @@ const Hero = () => {
             Hii 👋, you can call me{" "}
             <span className="text-blue-300 font-bold font-sans text-3xl"> {" "}Anant</span>
           </p>
-          <a href="#about">
+          <a href="#stacks">
             <SpotifyButton
               title="Know more"
               icon={<FaLocationArrow />}

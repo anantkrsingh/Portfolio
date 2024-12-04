@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "Anant's Portfolio",
   description:
     "A passionate Programmer having proficient skills in C, C++, Java ",
+    icons:"./v.png"
 };
 
 export default function RootLayout({

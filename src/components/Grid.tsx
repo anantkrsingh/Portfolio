@@ -1,11 +1,10 @@
 import React from "react";
 import { BentoGrid, BentoGridItem } from "./ui/bento-grid";
-import { gridItems } from "@/data";
 
 function Grid() {
   return (
     <section id="about">
-      <BentoGrid className="w-full py-20">
+      {/* <BentoGrid className="w-full py-20">
         {gridItems.map(({id,description,title,className,img,imgClassName,spareImg,titleClassName}) => {
           return (
             <BentoGridItem
@@ -21,7 +20,7 @@ function Grid() {
             />
           );
         })}
-      </BentoGrid>
+      </BentoGrid> */}
     </section>
   );
 }

@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
+import { FaLocationArrow } from "react-icons/fa6";
 
 import { cn } from "@/lib/utils";
 
@@ -37,6 +38,8 @@ export const BentoGridItem = ({
   imgClassName,
   titleClassName,
   spareImg,
+  iconLists,
+  link,
 }: {
   className?: string;
   id: number;
@@ -46,6 +49,8 @@ export const BentoGridItem = ({
   imgClassName?: string;
   titleClassName?: string;
   spareImg?: string;
+  iconLists?: string[];
+  link?: string;
 }) => {
   const leftLists = ["ReactJS", "Express", "Typescript"];
   const rightLists = ["VueJS", "NuxtJS", "GraphQL"];
@@ -74,7 +79,6 @@ export const BentoGridItem = ({
         className
       )}
       style={{
-      
         background: "rgb(4,7,29)",
         backgroundColor:
           "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
@@ -119,12 +123,44 @@ export const BentoGridItem = ({
           <div className="font-sans font-extralight md:max-w-32 md:text-xs lg:text-base text-sm text-[#C1C2D3] z-10">
             {description}
           </div>
-         
           <div
             className={`font-sans text-lg lg:text-3xl max-w-96 font-bold z-10`}
           >
             {title}
           </div>
+
+          {/* Project Specific UI */}
+          {iconLists && (
+            <div className="flex items-center justify-between mt-7 mb-3">
+              <div className="flex items-center">
+                {iconLists.map((icon, index) => (
+                  <div
+                    key={index}
+                    className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
+                    style={{
+                      transform: `translateX(-${5 * index + 2}px)`,
+                    }}
+                  >
+                    <img src={icon} alt="icon5" className="p-2" />
+                  </div>
+                ))}
+              </div>
+
+              {link && (
+                <div className="flex justify-center items-center">
+                  <a
+                    href={link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex lg:text-xl md:text-xs text-sm text-purple"
+                  >
+                    Check Live Site
+                  </a>
+                  <FaLocationArrow className="ms-3" color="#CBACF9" />
+                </div>
+              )}
+            </div>
+          )}
 
           {id === 2 && <GridGlobe />}
 

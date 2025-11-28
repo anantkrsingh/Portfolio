@@ -21,7 +21,6 @@ export const FloatingNav = ({
   className?: string;
 }) => {
   const { scrollYProgress } = useScroll();
-
   const [visible, setVisible] = useState(false);
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
@@ -42,7 +41,7 @@ export const FloatingNav = ({
 
   return (
     <AnimatePresence mode="wait">
-      <motion.div
+      <motion.nav
         initial={{
           opacity: 1,
           y: -100,
@@ -52,26 +51,34 @@ export const FloatingNav = ({
           opacity: visible ? 1 : 0,
         }}
         transition={{
-          duration: 0.2,
+          duration: 0.3,
+          ease: "easeOut",
         }}
         className={cn(
-          "flex max-w-fit  fixed top-10 inset-x-0 mx-auto border rounded-full  shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] px-10 py-5  items-center justify-center space-x-4 border-white/[0.2] bg-black-100" ,
+          "fixed top-6 inset-x-0 mx-auto z-[5000] max-w-fit",
           className
         )}
       >
-        {navItems.map((navItem: any, idx: number) => (
-          <Link
-            key={`link=${idx}`}
-            href={navItem.link}
-            className={cn(
-              "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
-            )}
-          >
-            <span className="block sm:hidden">{navItem.icon}</span>
-            <span className="hidden sm:block text-sm">{navItem.name}</span>
-          </Link>
-        ))}
-      </motion.div>
+        <div className="flex items-center gap-1 sm:gap-2 px-3 sm:px-4 py-2 sm:py-3 rounded-full bg-black/60 backdrop-blur-xl border border-white/[0.08] shadow-xl shadow-black/20">
+          {navItems.map((navItem, idx) => (
+            <Link
+              key={`link=${idx}`}
+              href={navItem.link}
+              className={cn(
+                "relative px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium",
+                "text-white/60 hover:text-white transition-colors duration-200",
+                "hover:bg-white/[0.05]"
+              )}
+            >
+              <span className="hidden sm:block">{navItem.name}</span>
+              <span className="block sm:hidden">{navItem.icon || navItem.name.charAt(0)}</span>
+            </Link>
+          ))}
+          
+          {/* Accent indicator */}
+          <div className="hidden sm:block w-2 h-2 rounded-full bg-emerald-500 ml-2 animate-pulse" />
+        </div>
+      </motion.nav>
     </AnimatePresence>
   );
 };

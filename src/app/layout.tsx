@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import GlobalSplash from "@/components/GlobalSplash";
 import { rajdhani, okraSans } from "./fonts";
 
 export const metadata: Metadata = {
@@ -27,7 +28,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <GlobalSplash>{children}</GlobalSplash>
         </ThemeProvider>
       </body>
     </html>

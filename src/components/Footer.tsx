@@ -1,53 +1,92 @@
-import { FaLocationArrow } from "react-icons/fa6";
-
+"use client";
+import { FaArrowUp, FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { motion } from "framer-motion";
 import { socialMedia } from "@/data";
-import MagicButton from "../components/ui/spotify-button";
 
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
-    <footer className="w-full pt-20 pb-10" id="contact">
-      <div className="w-full absolute left-0 -bottom-72 min-h-96">
-        <img
-          src="/footer-grid.svg"
-          alt="grid"
-          className="w-full h-full opacity-50 "
-        />
-      </div>
+    <footer className="relative section-padding" id="contact">
+      {/* Background gradient */}
+      <div className="absolute inset-0 bg-radial-gradient" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
-      <div className="flex flex-col items-center">
-        <h1 className="heading lg:max-w-[45vw]">
-          Want to  <span className="text-purple">contact me?</span> 
-        </h1>
-        <p className="text-white-200 md:mt-10 my-5 text-center">
-          Reach out to me today and let&apos;s discuss how I can help you
-          achieve your goals.
-        </p>
-        <a href="mailto:anantkrplay@gmail.com">
-          <MagicButton
-            title="Let's get in touch"
-            icon={<FaLocationArrow />}
-            position="right"
-          />
-        </a>
-      </div>
-      <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
-        <p className="md:text-base text-sm md:font-normal font-light">
-          Copyright © 2024 Anant Kumar
-        </p>
+      <div className="relative z-10 max-w-4xl mx-auto">
+        {/* CTA Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2 className="heading mb-6">
+            Let's Build <span className="gradient-text">Together</span>
+          </h2>
+          <p className="subheading mb-10">
+            Have a project in mind? I'd love to hear about it.
+            Let's create something amazing together.
+          </p>
 
-        <div className="flex items-center md:gap-3 gap-6">
-          {socialMedia.map((info) => (
-            <a href={info.link} target="_blank">
+          {/* Contact Button */}
+          <motion.a
+            href="mailto:anantkrplay@gmail.com"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            className="inline-flex items-center gap-3 px-8 py-4 bg-emerald-500 hover:bg-emerald-400 text-black font-semibold rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-emerald-500/25"
+          >
+            <FaEnvelope className="w-5 h-5" />
+            Get in Touch
+          </motion.a>
+        </motion.div>
 
-            <div
-              key={info.id}
-              className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
+        {/* Divider */}
+        <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent mb-12" />
+
+        {/* Bottom section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="flex flex-col sm:flex-row items-center justify-between gap-6"
+        >
+          {/* Copyright */}
+          <p className="text-sm text-white/40 order-2 sm:order-1">
+            © {new Date().getFullYear()} Anant Kumar. All rights reserved.
+          </p>
+
+          {/* Social Links */}
+          <div className="flex items-center gap-4 order-1 sm:order-2">
+            <a
+              href="https://github.com/anantkrsingh"
+              target="_blank"
+              rel="noreferrer"
+              className="p-3 glass-card rounded-full text-white/50 hover:text-emerald-400 hover:border-emerald-400/30 transition-all duration-300"
             >
-              <img src={info.img} alt="icons" width={20} height={20} />
-            </div>
+              <FaGithub className="w-5 h-5" />
             </a>
-          ))}
-        </div>
+            <a
+              href="https://linkedin.com/in/anantkrsingh"
+              target="_blank"
+              rel="noreferrer"
+              className="p-3 glass-card rounded-full text-white/50 hover:text-emerald-400 hover:border-emerald-400/30 transition-all duration-300"
+            >
+              <FaLinkedin className="w-5 h-5" />
+            </a>
+          </div>
+
+          {/* Back to top */}
+          <button
+            onClick={scrollToTop}
+            className="p-3 glass-card rounded-full text-white/50 hover:text-emerald-400 hover:border-emerald-400/30 transition-all duration-300 order-3"
+          >
+            <FaArrowUp className="w-4 h-4" />
+          </button>
+        </motion.div>
       </div>
     </footer>
   );

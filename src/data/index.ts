@@ -6,7 +6,7 @@ export const navItems = [
 ];
 
 
-   
+
 
 
 export const projects = [
@@ -14,49 +14,28 @@ export const projects = [
     id: 1,
     title: "Cricboom Cricket Live Score App",
     des: "Enjoy the thrill of cricket on cricboom, Amazing Features like ball to ball commentary before television",
-    img: "/p1.png",
+    logo: "/p1.svg", // Replace with your project logo
     iconLists: ["/re.svg", "/tail.svg", "/js.svg"],
     link: "https://play.google.com/store/apps/details?id=com.cricboom.liveline",
+    accentColor: "#10B981", // Emerald
   },
   {
     id: 2,
-    title: "Chatvid - Free Video Conferencing App",
+    title: "Chatvid - Free Video Conferencing",
     des: "Simplify your video conferencing experience with ChatVid. Seamlessly connect with colleagues and friends.",
-    img: "/p2.png",
+    logo: "/p2.svg", // Replace with your project logo
     iconLists: ["/kotlin.svg", "/android.svg", "/java.svg", "/fire.svg"],
     link: "https://play.google.com/store/apps/details?id=com.hotshot.chatvid",
+    accentColor: "#3B82F6", // Blue
   },
   {
     id: 3,
-    title: "Appliviu : Virtual Photoshoot by Rhizobee ",
-    des: "A plattform for virtual photshoot for reducing models & photography cost. An app by Rhizobee Innovations Pvt. Ltd.",
-    img: "/p3.png",
-    iconLists: ["/re.svg", "/tail.svg", "/js.svg", "nodejs.svg", "nginx.svg"],
+    title: "Appliviu : Virtual Photoshoot",
+    des: "A platform for virtual photoshoot for reducing models & photography cost. An app by Rhizobee Innovations.",
+    logo: "/p3.svg", // Replace with your project logo
+    iconLists: ["/re.svg", "/tail.svg", "/js.svg", "/nodejs.svg", "/nginx.svg"],
     link: "https://play.google.com/store/apps/details?id=com.rhizobee.appliviu",
-  },
-  {
-    id: 4,
-    title: "Kavach Innovations Landing Page",
-    des: "Kavach innovations landing page, having multiple pages & designed for multiple responsive screens.",
-    img: "/p4.png",
-    iconLists: ["/re.svg", "/tail.svg", "/js.svg", "/gsap.svg"],
-    link: "https://kavachinnovations.com",
-  },
-  {
-    id: 4,
-    title: "CricSpin Live Line ",
-    des: "Cricspin is a website for live cricket score with live commentary ",
-    img: "/p5.png",
-    iconLists: ["/re.svg", "/tail.svg", "/js.svg", "/gsap.svg"],
-    link: "https://kavachinnovations.com",
-  },
-  {
-    id: 4,
-    title: "Mujomegle : Omegle Similar ",
-    des: "A Random Video chatting app using Websocket similar to Omegle ",
-    img: "/p6.png",
-    iconLists: ["/re.svg", "/tail.svg", "/js.svg", "/gsap.svg"],
-    link: "https://mujomegle.com",
+    accentColor: "#EC4899", // Pink
   },
 ];
 
@@ -118,14 +97,14 @@ export const workExperience = [
     id: 2,
     title: "Android App Dev - SNA Sistec ",
     desc: "Designed and developed andorid app for controlling iot generators through phone",
-    className: "md:col-span-2", 
+    className: "md:col-span-2",
     thumbnail: "/exp2.svg",
   },
   {
     id: 3,
     title: "Freelance App Dev Project",
     desc: "Led the dev of a mobile app for a client, from initial concept to deployment on play stores.",
-    className: "md:col-span-2", 
+    className: "md:col-span-2",
     thumbnail: "/exp3.svg",
   },
   {
@@ -141,12 +120,12 @@ export const socialMedia = [
   {
     id: 1,
     img: "/git.svg",
-    link:"https://github.com/anantkrsingh"
+    link: "https://github.com/anantkrsingh"
   },
-  
+
   {
     id: 3,
     img: "/link.svg",
-    link:"https://linkedin.com/in/anantkrsingh"
+    link: "https://linkedin.com/in/anantkrsingh"
   },
 ];

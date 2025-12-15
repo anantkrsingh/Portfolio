@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import GlobalSplash from "@/components/GlobalSplash";
-import { rajdhani, okraSans } from "./fonts";
+import { rajdhani, okraSans, geistMono } from "./fonts";
 
 export const metadata: Metadata = {
   title: "Anant's Portfolio",
@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={` ${rajdhani.className} ${okraSans.variable} antialiased`}
+        className={` ${rajdhani.className} ${okraSans.variable} ${geistMono.className} antialiased`}
       >
         <ThemeProvider
           attribute="class"

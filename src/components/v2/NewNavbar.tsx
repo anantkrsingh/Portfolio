@@ -2,8 +2,9 @@
 import React, { useRef } from "react";
 import { useTheme } from "next-themes";
 import { Button } from "../moving-borders";
-import { Link, MoonIcon, SunIcon } from "lucide-react";
+import {  MoonIcon, SunIcon } from "lucide-react";
 import { navItems } from "@/data";
+import Link from "next/link";
 
 function NewNavbar() {
   const currentTheme = useTheme();
@@ -13,7 +14,7 @@ function NewNavbar() {
   };
   const activeSection = useRef<string>(navItems[0].link);
   return (
-    <nav className="bg-transparent backdrop-blur-xl  w-full z-50 border-b border-dashed dark:border-white/10 border-black/10">
+    <nav   className="bg-transparent backdrop-blur-xl  w-full border-b border-dashed dark:border-white/10 border-black/10">
       <div className={`flex items-center justify-between`}>
         <span className="text-2xl font-bold dark:text-white p-10 text-black cursor-pointer">
           A
@@ -21,16 +22,16 @@ function NewNavbar() {
 
         <div className="flex items-center gap-2  h-[-webkit-fill-available] me-4">
           <div className="gap-4 flex flex-row h-full">
-            <NavbarLink isActive={activeSection.current === navItems[0].link}>
+            <NavbarLink href={navItems[0].link} isActive={activeSection.current === navItems[0].link}>
               <p>About</p>
             </NavbarLink>
-            <NavbarLink isActive={activeSection.current === navItems[1].link}>
+            <NavbarLink href={navItems[1].link} isActive={activeSection.current === navItems[1].link}>
               <p>Experience</p>
             </NavbarLink>
-            <NavbarLink isActive={activeSection.current === navItems[2].link}>
+            <NavbarLink href={navItems[2].link} isActive={activeSection.current === navItems[2].link}>
               <p>Projects</p>
             </NavbarLink>
-            <NavbarLink isActive={activeSection.current === navItems[3].link}>
+            <NavbarLink href={navItems[3].link} isActive={activeSection.current === navItems[3].link}>
               <p>Blogs</p>
             </NavbarLink>
           </div>
@@ -59,22 +60,26 @@ function NewNavbar() {
 }
 
 const NavbarLink = ({
+  href,
   isActive,
   children,
 }: {
+  href: string;
   isActive: boolean;
   children: React.ReactNode;
 }) => {
   return (
-    <div
-      className={`flex items-center h-full gap-2 cursor-pointer dark:text-white text-black p-4 ${
-        isActive ? "bg-gray-700/20" : "bg-transparent"
-      } `}
-    >
-      <p className="text-sm font-medium dark:text-white text-black">
-        {children}
-      </p>
-    </div>
+    <Link href={href}>
+      <div
+        className={`flex items-center h-full gap-2 cursor-pointer dark:text-white text-black p-4 ${
+          isActive ? "bg-gray-700/20" : "bg-transparent"
+        } `}
+      >
+        <p className="text-sm font-medium dark:text-white text-black">
+          {children}
+        </p>
+      </div>
+    </Link>
   );
 };
 

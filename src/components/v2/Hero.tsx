@@ -1,9 +1,9 @@
 import { VerifiedIcon } from "lucide-react";
 import React from "react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Role from "./Role";
 import About from "./About";
 import GithubCalendar from "./GithubCalendar";
+import SharedAvatar from "./SharedAvatar";
 function Hero() {
   return (
     <div className="max-w-4xl mx-auto w-full m-10">
@@ -24,10 +24,7 @@ function Hero() {
                   Patna Bihar, India
                 </span>
               </div>
-              <Avatar>
-                <AvatarImage src="/anant.png" />
-                <AvatarFallback>AN</AvatarFallback>
-              </Avatar>
+              <SharedAvatar />
             </div>
 
             <Role />

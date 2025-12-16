@@ -4,9 +4,9 @@ import React from "react";
 function Experience() {
   return (
     <section id="experience">
-      <div className="flex flex-col w-full max-w-4xl gap-2 mx-auto px-4">
-        <div className="flex items-center justify-between w-full gap-4">
-          <span className="whitespace-nowrap shrink-0 text-orange-700 font-bold text-xl dark:text-orange-500">
+      <div className="flex flex-col w-full max-w-4xl gap-2 mx-auto px-4 md:px-4">
+        <div className="flex items-center justify-between w-full gap-2 md:gap-4">
+          <span className="whitespace-nowrap shrink-0 text-orange-700 font-bold text-lg md:text-xl dark:text-orange-500">
             {" "}
             ~ Experiences ~
           </span>{" "}
@@ -68,33 +68,36 @@ const ExperienceCard = ({
   duration: string;
 }) => {
   return (
-    <div className="flex cursor-pointer flex-col justify-between w-full transition-all duration-300 gap-4 group overflow-hidden">
-      <div className="flex flex-row gap-4 justify-between">
-        <div className="flex flex-row flex-1 gap-4 transition-all duration-300">
-          <span className="dark:text-white/25 text-black/50 pt-1">{sNo}.</span>
-          <div className="flex flex-col gap-2">
-            <span className="whitespace-nowrap shrink-0  font-bold text-xl ">
-              {title} <br />
+    <div className="flex cursor-pointer flex-col justify-between w-full transition-all duration-300 gap-3 md:gap-4 group overflow-hidden">
+      <div className="flex flex-col md:flex-row gap-2 md:gap-4 justify-between">
+        <div className="flex flex-row flex-1 gap-2 md:gap-4 transition-all duration-300">
+          <span className="dark:text-white/25 text-black/50 pt-1 text-sm md:text-base">{sNo}.</span>
+          <div className="flex flex-col gap-1 md:gap-2 flex-1 min-w-0">
+            <span className="font-bold text-lg md:text-xl break-words">
+              {title}
             </span>
-            <span className="text-sm font-normal dark:text-white/50 text-black/80 leading-relaxed line-clamp-3 overflow-hidden transition-all duration-300 ">
+            <span className="text-xs md:text-sm font-normal dark:text-white/50 text-black/80 leading-relaxed">
               {role}
             </span>{" "}
             <span
-              className="text-sm
+              className="text-xs md:text-sm
     flex flex-row gap-2 items-start flex-wrap
     font-normal
     dark:text-white/50 text-black/80
     leading-relaxed
-    overflow-hidden
-    max-h-0
-    opacity-0
-    translate-y-1
+    max-h-none
+    opacity-100
+    translate-y-0
+    md:overflow-hidden
+    md:max-h-0
+    md:opacity-0
+    md:translate-y-1
     transition-all
     duration-300
-    group-hover:max-h-40
-    group-hover:opacity-100
-    group-hover:translate-y-0
-    group-hover:dark:text-white/70 group-hover:text-black/70 "
+    md:group-hover:max-h-40
+    md:group-hover:opacity-100
+    md:group-hover:translate-y-0
+    md:group-hover:dark:text-white/70 md:group-hover:text-black/70"
             >
               {description}
             </span>
@@ -102,8 +105,8 @@ const ExperienceCard = ({
         </div>
 
         <span
-          className="text-sm   whitespace-nowrap
- font-normal text-white/50 leading-relaxed line-clamp-3 overflow-hidden transition-all duration-300 "
+          className="text-xs md:text-sm whitespace-nowrap md:whitespace-nowrap
+ font-normal dark:text-white/50 text-black/80 leading-relaxed shrink-0 self-start md:self-auto"
         >
           {duration}
         </span>

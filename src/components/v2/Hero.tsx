@@ -6,25 +6,27 @@ import GithubCalendar from "./GithubCalendar";
 import SharedAvatar from "./SharedAvatar";
 function Hero() {
   return (
-    <div className="max-w-4xl mx-auto w-full m-10">
-      <div className="flex items-center w-full px-4">
-        <div className="flex items-center gap-2">
-          <div className="transition-all duration-300 flex flex-col gap-2">
-            <div className="flex items-center justify-between w-full">
-              <div>
-                <div className="flex items-center gap-2">
+    <div className="max-w-4xl mx-auto w-full m-4 md:m-10">
+      <div className="flex items-center w-full px-2 md:px-4">
+        <div className="flex items-center gap-2 w-full">
+          <div className="transition-all duration-300 flex flex-col gap-2 w-full">
+            <div className="flex items-start md:items-center justify-between w-full gap-4">
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center gap-2 flex-wrap">
                   <div>
-                    <p className="text-2xl font-bold text-black dark:text-neutral-50">
+                    <p className="text-xl md:text-2xl font-bold text-black dark:text-neutral-50">
                       Anant Kumar <br />
                     </p>
                   </div>
-                  <VerifiedIcon className="text-emerald-400" />
+                  <VerifiedIcon className="text-emerald-400 w-5 h-5 md:w-6 md:h-6 flex-shrink-0" />
                 </div>
-                <span className="text-sm text-gray-500">
+                <span className="text-xs md:text-sm text-gray-500">
                   Patna Bihar, India
                 </span>
               </div>
-              <SharedAvatar />
+              <div className="flex-shrink-0">
+                <SharedAvatar />
+              </div>
             </div>
 
             <Role />

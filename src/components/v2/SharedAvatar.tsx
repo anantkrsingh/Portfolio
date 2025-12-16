@@ -20,7 +20,7 @@ export default function ImageExpand() {
       <motion.div
         layoutId="profile-image"
         onClick={() => setOpen(true)}
-        className="relative w-20 h-20 rounded-full overflow-hidden cursor-pointer"
+        className="relative w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden cursor-pointer"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >

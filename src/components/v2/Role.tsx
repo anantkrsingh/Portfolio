@@ -20,7 +20,7 @@ function Role() {
   }, []);
 
   return (
-    <div className="p-2 dark:bg-orange-500/50 bg-orange-500 text-white  dark:shadow-[5px_5px_0px_rgba(255,255,255,0.7)] shadow-[5px_5px_0px_rgba(0,0,0,0.7)] transition-width duration-300 w-[fit-content]" >
+    <div className="p-2 md:p-2 dark:bg-orange-500/50 bg-orange-500 text-white dark:shadow-[5px_5px_0px_rgba(255,255,255,0.7)] shadow-[5px_5px_0px_rgba(0,0,0,0.7)] transition-width duration-300 w-[fit-content] text-sm md:text-base" >
       <RoleView role={role} />
     </div>
   );

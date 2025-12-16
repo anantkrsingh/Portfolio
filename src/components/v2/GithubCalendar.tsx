@@ -1,6 +1,6 @@
 "use client";
 
-import {GitHubCalendar as GitHubCalendarComponent} from "react-github-calendar";
+import { GitHubCalendar as GitHubCalendarComponent } from "react-github-calendar";
 import { useTheme } from "next-themes";
 
 function GithubCalendar() {
@@ -15,15 +15,17 @@ function GithubCalendar() {
   };
 
   return (
-    <div className="mt-10">
-      <GitHubCalendarComponent
-        username="anantkrsingh"
-        showColorLegend={false}
-        blockSize={12}
-        blockMargin={5}
-        fontSize={14}
-        theme={theme === "dark" ? darkTheme : lightTheme}
-      />
+    <div className="mt-10 w-full overflow-x-auto">
+      <div className="min-w-max scale-[0.9] sm:scale-100 origin-left">
+        <GitHubCalendarComponent
+          username="anantkrsingh"
+          showColorLegend={false}
+          blockSize={12}
+          blockMargin={4}
+          fontSize={14}
+          theme={theme === "dark" ? darkTheme : lightTheme}
+        />
+      </div>
     </div>
   );
 }

@@ -8,7 +8,6 @@ import { useSearchParams } from "next/navigation";
 
 function NewNavbar() {
   const currentTheme = useTheme();
-  const searchParams = useSearchParams();
   const isDark = currentTheme.theme === "dark";
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const toggleTheme = () => {
@@ -120,28 +119,28 @@ function NewNavbar() {
           <div className="flex flex-col">
             <MobileNavbarLink
               href={navItems[0].link}
-              isActive={activeSection.current === navItems[0].link}
+              isActive={activeSection === navItems[0].link}
               onClick={closeMobileMenu}
             >
               About
             </MobileNavbarLink>
             <MobileNavbarLink
               href={navItems[1].link}
-              isActive={activeSection.current === navItems[1].link}
+              isActive={activeSection === navItems[1].link}
               onClick={closeMobileMenu}
             >
               Experience
             </MobileNavbarLink>
             <MobileNavbarLink
               href={navItems[2].link}
-              isActive={activeSection.current === navItems[2].link}
+              isActive={activeSection === navItems[2].link}
               onClick={closeMobileMenu}
             >
               Projects
             </MobileNavbarLink>
             <MobileNavbarLink
               href={navItems[3].link}
-              isActive={activeSection.current === navItems[3].link}
+              isActive={activeSection === navItems[3].link}
               onClick={closeMobileMenu}
             >
               Blogs

@@ -7,7 +7,7 @@ export default function GlobalSplash({
 }: {
   children: React.ReactNode;
 }) {
-  const [loading, setLoading] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(true);
 
   return (
     <>

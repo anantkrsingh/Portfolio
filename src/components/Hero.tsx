@@ -6,11 +6,14 @@ import { TextGenerateEffect } from "./ui/text-generate-effect";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section
+      id=""
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+    >
       {/* Background elements */}
       <div className="absolute inset-0 bg-grid-pattern opacity-50" />
       <div className="absolute inset-0 bg-radial-gradient" />
-      
+
       {/* Floating orbs */}
       <motion.div
         className="absolute top-20 left-10 w-72 h-72 bg-emerald-500/20 rounded-full blur-[100px]"
@@ -93,12 +96,44 @@ const Hero = () => {
                   fill="none"
                 />
                 {/* Drip effects */}
-                <ellipse cx="380" cy="48" rx="8" ry="12" fill="white" className="opacity-80" />
-                <ellipse cx="20" cy="42" rx="6" ry="10" fill="white" className="opacity-70" />
+                <ellipse
+                  cx="380"
+                  cy="48"
+                  rx="8"
+                  ry="12"
+                  fill="white"
+                  className="opacity-80"
+                />
+                <ellipse
+                  cx="20"
+                  cy="42"
+                  rx="6"
+                  ry="10"
+                  fill="white"
+                  className="opacity-70"
+                />
                 {/* Splatter dots */}
-                <circle cx="395" cy="35" r="3" fill="white" className="opacity-60" />
-                <circle cx="5" cy="38" r="2" fill="white" className="opacity-50" />
-                <circle cx="388" cy="60" r="2" fill="white" className="opacity-40" />
+                <circle
+                  cx="395"
+                  cy="35"
+                  r="3"
+                  fill="white"
+                  className="opacity-60"
+                />
+                <circle
+                  cx="5"
+                  cy="38"
+                  r="2"
+                  fill="white"
+                  className="opacity-50"
+                />
+                <circle
+                  cx="388"
+                  cy="60"
+                  r="2"
+                  fill="white"
+                  className="opacity-40"
+                />
               </svg>
               {/* Name text */}
               <span className="relative z-10 text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-black font-black tracking-tight px-2">

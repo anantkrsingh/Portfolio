@@ -10,32 +10,59 @@ export const navItems = [
 
 
 export const projects = [
+
   {
     id: 1,
-    title: "Cricboom Cricket Live Score App",
-    des: "Enjoy the thrill of cricket on cricboom, Amazing Features like ball to ball commentary before television",
-    logo: "/p1.svg", // Replace with your project logo
-    iconLists: ["/re.svg", "/tail.svg", "/js.svg"],
-    link: "https://play.google.com/store/apps/details?id=com.cricboom.liveline",
-    accentColor: "#10B981", // Emerald
+    title: "Tinyur - URL Shortener",
+    des: "A URL shortener built in Next.js and MongoDB using Prisma ORM.",
+    logo: "/p3.svg",
+    iconLists: ["/re.svg", "/tail.svg", "/js.svg", "/nodejs.svg"],
+    link: "https://tinyur.in/hello",
+    github: "https://tinyur.in/tinyur",
+    accentColor: "#EC4899",
   },
   {
     id: 2,
-    title: "Chatvid - Free Video Conferencing",
-    des: "Simplify your video conferencing experience with ChatVid. Seamlessly connect with colleagues and friends.",
-    logo: "/p2.svg", // Replace with your project logo
-    iconLists: ["/kotlin.svg", "/android.svg", "/java.svg", "/fire.svg"],
-    link: "https://play.google.com/store/apps/details?id=com.hotshot.chatvid",
-    accentColor: "#3B82F6", // Blue
+    title: "BallTracker - Live Cricket Score App",
+    des: "A live cricket score app built in React native and express.js streams live cricket score and ball by ball commentary. Nginx for reverse proxy.",
+    logo: "/p3.svg",
+    iconLists: ["/re.svg", "/tail.svg", "/js.svg", "/nodejs.svg", "/nginx.svg"],
+    playStore: "https://tinyur.in/RtSVEO",
+    appStore: "https://tinyur.in/yep2FO",
+    github: null,
+    accentColor: "#EC4899",
   },
   {
-    id: 3,
-    title: "Appliviu : Virtual Photoshoot",
-    des: "A platform for virtual photoshoot for reducing models & photography cost. An app by Rhizobee Innovations.",
-    logo: "/p3.svg", // Replace with your project logo
+    id: 2,
+    title: "Hopzy - Online Ticketing Platform",
+    des: "Built hopzy.app from scratch using Next.js, Tailwind CSS, TypeScript, Prisma ORM, and PostgreSQL. Deployed on AWS EC2 with Github Actions for CI/CD. Maintained Apps in React Native and Deployed on Play Store and App Store.",
+    logo: "/p3.svg",
     iconLists: ["/re.svg", "/tail.svg", "/js.svg", "/nodejs.svg", "/nginx.svg"],
-    link: "https://play.google.com/store/apps/details?id=com.rhizobee.appliviu",
-    accentColor: "#EC4899", // Pink
+    playStore: "https://tinyur.in/MfcjDd",
+    appStore: "https://tinyur.in/dFTjG0",
+    link: "https://tinyur.in/wSdgaC",
+    github: null,
+    accentColor: "#EC4899",
+  },
+
+  {
+    id: 3,
+    title: "Cricboom Cricket Live Score App",
+    des: "Enjoy the thrill of cricket on cricboom, Amazing Features like ball to ball commentary before television",
+    logo: "/p1.svg",
+    iconLists: ["/re.svg", "/tail.svg", "/js.svg"],
+    playStore: "https://tinyur.in/sZ3QBM",
+    github: null,
+    accentColor: "#10B981",
+  },
+  {
+    id: 4,
+    title: "Class 12 NCERT Books & Solutions",
+    des: "Built in React native and Supabase database for storing the books and solutions. Firebase Storage for storing PDFs",
+    logo: "/p2.svg",
+    iconLists: ["/re.svg", "/android.svg", "/supabase.svg", "/firebase.svg"],
+    playStore: "https://tinyur.in/zJtavJ",
+    accentColor: "#3B82F6",
   },
 ];
 

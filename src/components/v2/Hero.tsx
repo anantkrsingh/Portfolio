@@ -1,9 +1,16 @@
-import { VerifiedIcon } from "lucide-react";
+import { MailIcon, VerifiedIcon } from "lucide-react";
 import React from "react";
 import Role from "./Role";
 import About from "./About";
 import GithubCalendar from "./GithubCalendar";
 import SharedAvatar from "./SharedAvatar";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "../ui/tooltip";
+
 function Hero() {
   return (
     <div className="max-w-4xl mx-auto w-full m-4 md:m-10">
@@ -20,9 +27,19 @@ function Hero() {
                   </div>
                   <VerifiedIcon className="text-emerald-400 w-5 h-5 md:w-6 md:h-6 flex-shrink-0" />
                 </div>
-                <span className="text-xs md:text-sm text-gray-500">
-                  Patna Bihar, India
-                </span>
+                <div className="flex items-center gap-2 flex-row mt-1">
+                  <span className="text-xs md:text-sm text-gray-500">
+                    Patna Bihar, India
+                  </span>
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger className="cursor-pointer"><MailIcon className="w-4 h-4" /></TooltipTrigger>
+                      <TooltipContent>
+                        <p>anantkrplay@gmail.com</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                </div>
               </div>
               <div className="flex-shrink-0">
                 <SharedAvatar />

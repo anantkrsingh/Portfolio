@@ -71,7 +71,9 @@ const ExperienceCard = ({
     <div className="flex cursor-pointer flex-col justify-between w-full transition-all duration-300 gap-3 md:gap-4 group overflow-hidden">
       <div className="flex flex-col md:flex-row gap-2 md:gap-4 justify-between">
         <div className="flex flex-row flex-1 gap-2 md:gap-4 transition-all duration-300">
-          <span className="dark:text-white/25 text-black/50 pt-1 text-sm md:text-base">{sNo}.</span>
+          <span className="dark:text-white/25 text-black/50 pt-1 text-sm md:text-base">
+            {sNo}.
+          </span>
           <div className="flex flex-col gap-1 md:gap-2 flex-1 min-w-0">
             <span className="font-bold text-lg md:text-xl break-words">
               {title}

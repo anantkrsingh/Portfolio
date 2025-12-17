@@ -1,19 +1,20 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import { MoonIcon, SunIcon, Menu, X } from "lucide-react";
 import { navItems } from "@/data";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 
 function NewNavbar() {
   const currentTheme = useTheme();
+  const searchParams = useSearchParams();
   const isDark = currentTheme.theme === "dark";
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const toggleTheme = () => {
     currentTheme.setTheme(isDark ? "light" : "dark");
   };
-  const activeSection = useRef<string>(navItems[0].link);
-  
+  const [activeSection, setActiveSection] = useState<string>(navItems[0].link);
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
@@ -22,8 +23,10 @@ function NewNavbar() {
     setIsMobileMenuOpen(false);
   };
 
+
+
   return (
-    <nav className="bg-transparent backdrop-blur-xl h-[6rem] w-full border-b border-dashed dark:border-white/10 border-black/10 relative">
+    <nav className="bg-transparent fixed backdrop-blur-xl h-[6rem] top-0 left-0 right-0 z-50 w-full border-b border-dashed dark:border-white/10 border-black/10 ">
       <div className={`flex items-center justify-between h-full`}>
         <span className="text-2xl font-bold dark:text-white px-4 md:px-10 text-black cursor-pointer">
           A
@@ -34,25 +37,25 @@ function NewNavbar() {
           <div className="gap-4 flex flex-row h-full">
             <NavbarLink
               href={navItems[0].link}
-              isActive={activeSection.current === navItems[0].link}
+              isActive={activeSection === navItems[0].link}
             >
               <p>About</p>
             </NavbarLink>
             <NavbarLink
               href={navItems[1].link}
-              isActive={activeSection.current === navItems[1].link}
+              isActive={activeSection === navItems[1].link}
             >
               <p>Experience</p>
             </NavbarLink>
             <NavbarLink
               href={navItems[2].link}
-              isActive={activeSection.current === navItems[2].link}
+              isActive={activeSection === navItems[2].link}
             >
               <p>Projects</p>
             </NavbarLink>
             <NavbarLink
               href={navItems[3].link}
-              isActive={activeSection.current === navItems[3].link}
+              isActive={activeSection === navItems[3].link}
             >
               <p>Blogs</p>
             </NavbarLink>

@@ -1,4 +1,4 @@
-import { Jaro, Inconsolata, Rajdhani } from 'next/font/google'
+import { Rajdhani } from 'next/font/google'
 import localFont from 'next/font/local';
 import {GeistMono} from "geist/font/mono"
 export const rajdhani = Rajdhani({
